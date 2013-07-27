@@ -7,7 +7,8 @@
                      [c3p0/c3p0 "0.9.1.2"]
                      [org.clojure/java.jdbc "0.3.0-alpha4"]
                      [com.h2database/h2 "1.3.168"]
-                     [cheshire "5.2.0"]]
+                     [cheshire "5.2.0"]
+                     [com.datomic/datomic-free "0.8.4020.26"]]
       :plugins [[lein-ring "0.8.6"]]
       :ring {:handler clojure-rest.handler/app}
       :profiles

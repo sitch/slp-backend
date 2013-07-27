@@ -1,4 +1,4 @@
-(ns aiahoao.core)
+(ns studentlendingproject.core)
 
 (meditations
   "We shall contemplate truth by testing reality, via equality"

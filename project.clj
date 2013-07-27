@@ -1,5 +1,5 @@
-(defproject clojure-rest "0.1.0-SNAPSHOT"
-      :description "REST Serviec"
+(defproject studentlendingproject "0.1.0-SNAPSHOT"
+      :description "REST Service"
       :url "http://www.studentlendingproject.com"
       :dependencies [[org.clojure/clojure "1.5.1"]
                      [compojure "1.1.5"]
@@ -10,6 +10,6 @@
                      [cheshire "5.2.0"]
                      [com.datomic/datomic-free "0.8.4020.26"]]
       :plugins [[lein-ring "0.8.6"]]
-      :ring {:handler clojure-rest.handler/app}
+      :ring {:handler studentlendingproject.handler/app}
       :profiles
       {:dev {:dependencies [[ring-mock "0.1.5"]]}})

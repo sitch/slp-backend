@@ -1,13 +1,7 @@
-# aiahoao
-
-A Clojure library designed to ... well, that part is up to you.
+# Student Lending Project
 
 ## Usage
 
-FIXME
+lein uberjar
+java -jar slp.jar server
 
-## License
-
-Copyright © 2013 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.

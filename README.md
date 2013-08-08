@@ -2,6 +2,7 @@
 
 ## Usage
 
+```
 lein uberjar
-java -jar slp.jar server
-
+java -jar target/studentlendingproject-0.1.0-SNAPSHOT-standalone.jar server
+```

@@ -1,2 +1,2 @@
-cmdhistory=["(hello \\"mike\\")" "(slp.app/hello \\"mike\\")" "(slp.app 1)" "(autotest)" "(date-format)" "(slp.app)" "(clavatar.core)" "(+ 1 2 )" "( - 3 3 )" "(3 - 3)" "(- 3 3 3)"]
+cmdhistory=["(hello \\"mike\\")" "(slp.app/hello \\"mike\\")" "(slp.app 1)" "(autotest)" "(date-format)" "(slp.app)" "(clavatar.core)" "(+ 1 2 )" "( - 3 3 )" "(3 - 3)" "(- 3 3 3)" "(def \:abc 123)"]
 eclipse.preferences.version=1

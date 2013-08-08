@@ -4,7 +4,10 @@
 (def conf
   (merge-with
    merge
-   {:datomic   {:db-uri       "datomic:free://localhost:4334/slp"
+   {:html-paths ["slp-frontend"
+                 "../slp-frontend/public"
+                 "../slp-frontend/public"]
+    :datomic   {:db-uri       "datomic:free://localhost:4334/slp"
                 :test-uri     "datomic:mem://slp"}
     :slp-email {:from-address "notifications@studentlendingproject.com"
                 :from-name    "Student Lending Project Notifications"}}

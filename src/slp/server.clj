@@ -40,7 +40,7 @@
 (def app
   (-> routes
       auth
-      ;; debug
+      debug
       wrap))
 
 (defn -main

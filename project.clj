@@ -7,7 +7,7 @@
 
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojure-contrib "1.2.0"]
-                 [com.datomic/datomic-free "0.8.4020.26"]
+                 [com.datomic/datomic-free "0.8.4122"]
                  [environ "0.4.0"]
                  [ring "1.2.0"]
                  [ring-mock "0.1.5"]
@@ -16,19 +16,21 @@
                  [liberator "0.9.0"]
                  [com.cemerick/friend "0.1.5"]
                  [crypto-random "1.1.0"]
-                 [org.clojure/tools.namespace "0.2.2"]
+                 [org.clojure/tools.namespace "0.2.4"]
                  [com.flyingmachine/webutils "0.1.1"]
                  [flyingmachine/cartographer "0.1.1"]
-                 [markdown-clj "0.9.25"]
+                 [markdown-clj "0.9.29"]
                  [clavatar "0.2.1"]
-                 [org.apache.commons/commons-email "1.2"]
-                 [org.clojure/data.json "0.2.2"]]
+                 [org.apache.commons/commons-email "1.3.1"]
+                 [org.clojure/data.json "0.2.2"]
+                 [org.webbitserver/webbit "0.4.15"]]
 
   :plugins [[lein-environ "0.4.0"]
-            [lein-beanstalk "0.2.7"]]
+            [lein-beanstalk "0.2.7"]
+            [lein-ancient "0.4.4"]]
 
   :resource-paths ["resources"]
   
-  :profiles {:dev {:dependencies [[midje "1.5.0"]]}}
+  :profiles {:dev {:dependencies [[midje "1.5.1"]]}}
 
   :main slp.app)

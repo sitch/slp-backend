@@ -2,9 +2,10 @@
   (:require compojure.route
             compojure.handler
             [ring.util.response :as resp]
-            [slp.controllers.analytics :as analytics]
+            [slp.controllers.js :as js]
+;            [slp.controllers.analytics :as analytics]
             [slp.controllers.forms :as forms]
-            [slp.controllers.profile :as profile]
+;            [slp.controllers.profile :as profile]
             [slp.controllers.session :as session]
             [slp.controllers.users :as users]
             [cemerick.friend :as friend])
@@ -23,13 +24,28 @@
               (~handler ~params (friend/current-authentication req#)))))
 
 (defroutes routes
+  (authroute GET "/scripts/load-session.js" js/load-session)
+
+  ;; Serve up web app
+  (apply compojure.core/routes
+         (map #(compojure.core/routes
+                (compojure.route/files "/" {:root %})
+                (compojure.route/resources "/" {:root %}))
+              (reverse (config :html-paths))))
+  (apply compojure.core/routes
+         (map (fn [response-fn]
+                (GET "/" [] (response-fn "index.html" {:root "slp-frontend"})))
+              [resp/file-response resp/resource-response]))
+  
   ;; Forms
-  (authroute GET  "/form/:user" forms/show)
-  (authroute GET  "/form/schema" forms/show-schema)
+;  (authroute GET  "/form/:user" forms/show)
+;  (authroute GET  "/form/schema" forms/show-schema)
+  (route     GET "/form/schema" forms/show-schema)
+  (route     GET "/form/status"   forms/show-progress)
 
   ;; Profile
-  (authroute POST "/profile" profile/create!)
-  (authroute PUT  "/profile/:id" profile/update!)
+;  (authroute POST "/profile" profile/create!)
+;  (authroute PUT  "/profile/:id" profile/update!)
 
   ;; Users
   (authroute POST "/users" users/registration-success-response)
@@ -38,7 +54,7 @@
   (authroute POST "/users/:id/password" users/change-password!)
 
   ;; Analytics
-  (authroute POST "/analytics/:id" analytics/create!)
+;  (authroute POST "/analytics/:id" analytics/create!)
   
   ;; Auth
   (route POST "/login" session/create!)

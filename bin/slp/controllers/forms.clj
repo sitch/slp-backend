@@ -1,24 +1,49 @@
 (ns slp.controllers.forms
-  (:require [datomic.api :as d]
+  (:require [slp.db.validations :as validations]
             [slp.db.query :as db]
+            [datomic.api :as d]
             [slp.db.maprules :as mr]
             [slp.db.transactions :as ts]
-            [slp.db.validations :as validations]
-            [flyingmachine.cartographer.core :as c])
-  (:use [liberator.core :only [defresource]]
+            [slp.models.signup :as signup]
+            [flyingmachine.cartographer.core :as c]
+            [cemerick.friend :as friend]
+            cemerick.friend.workflows)
+  (:use [flyingmachine.webutils.validation :only (if-valid)]
+        [liberator.core :only [defresource]]
+        slp.models.permissions
+        slp.db.mapification
         slp.controllers.shared
-        slp.models.partners
         slp.utils))
 
-(defresource show [params]
+(defresource show-schema [params]
   :available-media-types ["application/json"]
-;  :exists? (exists? (record (id) {:include {:posts {:include {:topic {:only [:title :id]}}}}}))
-  :handle-ok record-in-ctx)
+  :handle-ok signup/full-form)
 
-(defresource show-schema []
+(defresource show-progress [params]
   :available-media-types ["application/json"]
+  :handle-ok signup/full-form)
+
+
+;  (:require [datomic.api :as d]
+;            [slp.db.query :as db]
+;            [slp.db.maprules :as mr]
+;            [slp.db.transactions :as ts]
+;            [slp.db.validations :as validations]
+;            [flyingmachine.cartographer.core :as c])
+;  (:use [liberator.core :only [defresource]]
+;        slp.controllers.shared
+;        slp.models.partners
+;        slp.utils))
+;
+;(defresource show [params]
+;  :available-media-types ["application/json"]
 ;  :exists? (exists? (record (id) {:include {:posts {:include {:topic {:only [:title :id]}}}}}))
-  :handle-ok record-in-ctx)
+;  :handle-ok record-in-ctx)
+
+;(defresource show-schema []
+;  :available-media-types ["application/json"]
+;  :exists? (exists? (record (id) {:include {:posts {:include {:topic {:only [:title :id]}}}}}))
+;  :handle-ok record-in-ctx)
 
 ;(def wrap-form [user form]
 ;  (loop form slp.models.partners/:user))

@@ -30,8 +30,8 @@
     :workflows [(workflows/interactive-form
                  :redirect-on-auth? false
                  :login-failure-handler (fn [req] {:body {:errors {:username ["invalid username or password"]}} :status 401}))
-                users/attempt-registration
-                session-store-authorize]
+                users/attempt-registration]
+;                session-store-authorize] 
     :redirect-on-auth? false
     :login-uri "/login"
     :unauthorized-redirect-uri "/login"}))

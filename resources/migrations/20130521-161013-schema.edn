@@ -1,20 +1,20 @@
 [
  ;; session
- {:db/ident :session/key
+ {:db/doc "Key to look up session"
+  :db/ident :session/key
   :db/id #db/id[:db.part/db]
   :db/valueType :db.type/uuid
   :db/cardinality :db.cardinality/one
   :db/unique :db.unique/value
   :db/index true
-  :db/doc "Key to look up session"
   :db.install/_attribute :db.part/db}
 
- {:db/ident :session/data
+ {:db/doc "All session data"
+  :db/ident :session/data
   :db/id #db/id[:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db/index true
-  :db/doc "All session data"
   :db.install/_attribute :db.part/db}
  
  ;; users
@@ -55,4 +55,7 @@
   :db/fulltext true
   :db/doc "Form Value"
   :db.install/_attribute :db.part/db}
+  
+  ;; yodlee
+  ;; username/login/email
 ]

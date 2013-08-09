@@ -1,5 +1,5 @@
 [
- ;; session
+ ;; SESSION
  {:db/doc "Key to look up session"
   :db/ident :session/key
   :db/id #db/id[:db.part/db]
@@ -17,45 +17,288 @@
   :db/index true
   :db.install/_attribute :db.part/db}
  
- ;; users
- {:db/ident :user/username
+ ;; USER
+ {:db/doc "User Name"
+  :db/ident :users/username
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
-  :db/fulltext true
+  :db/unique :db.unique/value
   :db.install/_attribute :db.part/db}
 
- {:db/ident :user/password
+ {:db/doc "User Password"
+  :db/ident :users/password
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
 
- {:db/ident :user/email
+ {:db/doc "User Email"
+  :db/ident :users/email
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
-  :db/index true
-  :db/fulltext true
-  :db.install/_attribute :db.part/db}
-
- ;; forms
- {:db/ident :form/field
-  :db/id #db/id[:db.part/db]
-  :db/valueType :db.type/string
-  :db/cardinality :db.cardinality/one
-  :db/fulltext true
-  :db/doc "Form Field"
+  :db/unique :db.unique/value
   :db.install/_attribute :db.part/db}
  
-  {:db/ident :form/value
+ ;; USER - Profile
+ {:db/doc "User First name"
+  :db/ident :users.profile/first-name
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "User Last name"
+  :db/ident :users.profile/last-name
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+  {:db/doc "User Date of birth"
+  :db/ident :users.profile/date-of-birth
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/doc "User First street address"
+  :db/ident :users.profile/street1
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "User Second street address"
+  :db/ident :users.profile/street2
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+  {:db/doc "User City"
+  :db/ident :users.profile/city
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+  {:db/doc "User State"
+  :db/ident :users.profile/state
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+ {:db/doc "User Zipcode"
+  :db/ident :users.profile/zipcode
+  :db/id #db/id [:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+; ;; USER - Yodlee info
+; {:db/doc "User - Yodlee is old user"
+;  :db/ident :users/is-old-user
+;  :db/id #db/id [:db.part/db]
+;  ; UNSURE ABOUT THIS FIELD ? Bool?
+;  :db/valueType :db.type/boolean
+;  :db/cardinality :db.cardinality/one
+;  :db.install/_attribute :db.part/db}
+; 
+;  {:db/doc "User - Yodlee is onboarded"
+;  :db/ident :users/is-onboarded
+;  :db/id #db/id [:db.part/db]
+;  ; UNSURE ABOUT THIS FIELD ? Bool?
+;  :db/valueType :db.type/boolean
+;  :db/cardinality :db.cardinality/one
+;  :db.install/_attribute :db.part/db}
+
+ ;; FORMS
+; {:db/doc "Form Field"
+;  :db/ident :form/field
+;  :db/id #db/id[:db.part/db]
+;  :db/valueType :db.type/string
+;  :db/cardinality :db.cardinality/one
+;  :db/fulltext true
+;  :db.install/_attribute :db.part/db}
+; 
+; {:db/doc "Form Value"
+;  :db/ident :form/value
+;  :db/id #db/id[:db.part/db]
+;  :db/valueType :db.type/string
+;  :db/cardinality :db.cardinality/one
+;  :db/fulltext true
+;  :db.install/_attribute :db.part/db}
+  
+ ;; LOANS
+ {:db/doc "Loan Name"
+  :db/ident :loans/name
   :db/id #db/id[:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db/fulltext true
-  :db/doc "Form Value"
+  :db.install/_attribute :db.part/db}
+
+ {:db/doc "Loan Type"
+  :db/ident :loans/type
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db.install/_attribute :db.part/db}
+
+ {:db/doc "Loan Interest Rate"
+  :db/ident :loans/rate
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Loan Balance"
+  :db/ident :loans/balance
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Loan Minimum Payment"
+  :db/ident :loans/minimum-payment
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
   
-  ;; yodlee
-  ;; username/login/email
+ ;; ACCOUNTS
+ {:db/doc "Account loan"
+  :db/ident :accounts/loan
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Name"
+  :db/ident :accounts/name
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Site display name"
+  :db/ident :accounts/site-display-name
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Balance"
+  :db/ident :accounts/balance
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Minimum Payment"
+  :db/ident :accounts/minimum-payment
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/float
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Due Date"
+  :db/ident :accounts/due-date
+  :db/id #db/id[:db.part/db]
+  ; Really unsure about the type here? should be instant or bytes?
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Logo image"
+  :db/ident :accounts/logo
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Phone number"
+  :db/ident :accounts/phone-number
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+  {:db/doc "Account Website"
+  :db/ident :accounts/website
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/uri
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account NSLDS servicer id"
+  :db/ident :accounts/nslds-servicer-id
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account Servicer id"
+  :db/ident :accounts/servicer-id
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+ ;; ACCOUNT.YODLEE
+ {:db/doc "Account - Yodlee is linked"
+  :db/ident :accounts.yodlee/is-linked
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+ {:db/doc "Account - Yodlee is saved"
+  :db/ident :accounts.yodlee/is-saved
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+  
+ {:db/doc "Account - Yodlee is error"
+  :db/ident :accounts.yodlee/is-error
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account - Yodlee refresh stated"
+  :db/ident :accounts.yodlee/start-refresh
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account - Yodlee item id"
+  :db/ident :accounts.yodlee/yodlee-item-id
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/long
+;   May need to be unique
+;  :db/unique :db.unique/value
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account - Yodlee last refesh time"
+  :db/ident :accounts.yodlee/last-refresh-time
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+ 
+ {:db/doc "Account - Yodlee Refresh status"
+  :db/ident :accounts.yodlee/refresh-status
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
 ]

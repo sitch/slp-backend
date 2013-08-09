@@ -5,6 +5,8 @@
             [slp.controllers.js :as js]
 ;            [slp.controllers.analytics :as analytics]
             [slp.controllers.forms :as forms]
+;            [slp.controllers.accounts :as accounts]
+;            [slp.controllers.loans :as loans]
 ;            [slp.controllers.profile :as profile]
             [slp.controllers.session :as session]
             [slp.controllers.users :as users]
@@ -41,8 +43,19 @@
 ;  (authroute GET  "/form/:user" forms/show)
 ;  (authroute GET  "/form/schema" forms/show-schema)
   (route     GET "/form/schema" forms/show-schema)
-  (route     GET "/form/status"   forms/show-progress)
+  (route     GET "/form/status" forms/show-progress)
+  
+  ;; Accounts
+;  (authroute GET  "/accounts" accounts/show)
+;  (authroute POST "/accounts" accounts/create!)
+;  (authroute GET  "/accounts/:id" accounts/show)
+;  (authroute PUT  "/accounts/:id" accounts/update!)
+;  (authroute GET  "/accounts/aggregate" accounts/aggregate)
 
+  ;; Loans
+;  (authroute GET "/loans/:id" loans/show)
+;  (authroute PUT "/loans/:id" loans/update!)
+  
   ;; Profile
 ;  (authroute POST "/profile" profile/create!)
 ;  (authroute PUT  "/profile/:id" profile/update!)
@@ -50,7 +63,7 @@
   ;; Users
   (authroute POST "/users" users/registration-success-response)
   (route     GET  "/users/:id" users/show)
-  (authroute POST "/users/:id" users/update!)
+  (authroute PUT  "/users/:id" users/update!)
   (authroute POST "/users/:id/password" users/change-password!)
 
   ;; Analytics

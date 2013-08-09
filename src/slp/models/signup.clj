@@ -15,25 +15,30 @@
 	:type "object"
 	:properties {
 		:first-name {
+      :title "First Name"
 			:type "string"
-			:required true
+;			:required true
 		}
     :last-name {
+      :title "Last Name"
 			:type "string"
-			:required true
+;			:required true
 		}
 		:date-of-birth {
+      :title "Date of Birth"
 			:type "text"
 			:format "date"
-			:required true
+;			:required true
 		}
 		:social-security {
+      :title "Social Security Number"
 			:type "number"
-			:required true
+;			:required true
 		}
     :federal-pin {
+      :title "Federal Pin"
       :type "number"
-      :required false
+;      :required false
     }
   }
  })
@@ -66,17 +71,25 @@
 		}
 	}
 	:fields {
-		:name {
-			:label "Your Name"
+    :first-name {
+      :label "First Name"
 		}
-		:birthday {
-			:label "Your Birthday"
+    :last-name {
+      :label "Last Name"
+;			:hideInitValidationError true
 		}
-		:preference {
-			:label "Your Destination"
-			:type "select"
-			:optionLabels ["Orlando USA" "Tokyo Japan" "Amsterdam Netherlands"]
-		}}})
+		:date-of-birth {
+      :label "Date of Birth"
+;			:hideInitValidationError true
+		}
+		:social-security {
+      :label "Social Security Number"
+;			:hideInitValidationError true
+		}
+    :federal-pin {
+      :label "Federal Pin"
+;      :hideInitValidationError true
+    }}})
 
 
 (def full-form {:schema schema :options options})

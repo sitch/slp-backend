@@ -1,8 +1,8 @@
 (ns slp.ws.utils)
 
-(defn remove-nils-from-map
-  [record]
-  (into {} (remove (comp nil? second) record)))
+(defn now
+  []
+  (java.util.Date.))
 
 (defn str->int
   [str]
@@ -10,6 +10,6 @@
     (read-string (re-find #"^-?\d+$" str))
     str))
 
-(defn now
-  []
-  (java.util.Date.))
+(defn remove-nils-from-map
+  [record]
+  (into {} (remove (comp nil? second) record)))

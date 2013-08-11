@@ -1,5 +1,4 @@
-(ns slp.ws.repl
-  )
+(ns slp.ws.repl)
 ;  (:use slp.handler
 ;        ring.server.standalone
 ;        [ring.middleware file-info file]))

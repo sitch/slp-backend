@@ -1,5 +1,11 @@
 (ns slp.ops.group-spec)
 
+(def aws-access-key-id "AKIAJSS2XC5M2F7T37RQ")
+(def aws-secret-key-id "+fEnXVTH68qs84UspCqv2r02R9drTnLrmJRRHH6o")
+
+
+
+
 (def java-server 
   (java/server-spec {
     :vendor :oracle 

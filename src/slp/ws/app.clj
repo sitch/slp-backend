@@ -1,5 +1,5 @@
 (ns slp.ws.app
-  (:gen-class)
+;  (:gen-class)
   (:require [slp.ws.server :as server]
             [slp.ws.db.manage :as db]))
 

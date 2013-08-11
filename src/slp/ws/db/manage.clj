@@ -1,5 +1,5 @@
 (ns slp.ws.db.manage
-  (:gen-class)
+;  (:gen-class)
   (:require [datomic.api :as d]
             [slp.ws.db.query :as db]
             [clojure.java.io :as io])

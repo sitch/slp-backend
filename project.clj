@@ -38,11 +38,15 @@
 
   :plugins [[lein-ancient "0.4.4"]
             [lein-environ "0.4.0"]
+            [lein-ring "0.8.6"]
             [com.palletops/pallet-lein "0.8.0-alpha.1"]]
 
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]
                                   [ring/ring-devel "1.2.0"]
                                   [midje "1.5.1"]]}}
+  
+  ;; Ring
+  :ring {:handler slp.ws.server/-main}
   
   ;; Pallet
 ;  :pallet {:source-paths ["src-pallet"] :resource-paths []}

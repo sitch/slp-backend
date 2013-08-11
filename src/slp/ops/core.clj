@@ -1,7 +1,7 @@
 (ns slp.ops.core
  (:use (clojure.contrib strint core))
  (:require
-   [cemerick.webdeploy.ops.nodes :as webdeploy-nodes]
+   [slp.ops.nodes :as webdeploy-nodes]
    pallet.core
    [org.jclouds.compute :as jcompute]
    [clojure.contrib.logging :as log]))

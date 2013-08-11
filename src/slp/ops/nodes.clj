@@ -1,12 +1,12 @@
 (ns slp.ops.nodes
  (:use clojure.contrib.core)
  (:require
-   [cemerick.webdeploy.ops.crate :as webdeploy-crate]
+   [slp.ops.crate :as webdeploy-crate]
    (pallet core resource)
    (pallet.crate java
      [tomcat :as tomcat]
      [automated-admin-user :as admin])
-   [clojure.contrib.logging :as log]))
+     [clojure.contrib.logging :as log]))
 
 (def warfile-path
   ; this is just making things easier for demonstration purposes

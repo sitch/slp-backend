@@ -1,0 +1,1 @@
+java -jar target/slp-standalone.jar server

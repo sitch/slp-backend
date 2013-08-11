@@ -1,0 +1,1 @@
+lein uberjar; java -jar target/slp-standalone.jar server

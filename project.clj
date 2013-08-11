@@ -18,8 +18,8 @@
                  [com.datomic/datomic-free "0.8.4122"]
                  
                  ;; Web Services
-                 [ring "1.2.0"]
-                 [ring-mock "0.1.5"]
+                 [ring/ring-core "1.2.0"]
+                 [ring/ring-jetty-adapter "1.2.0"]
                  [ring-middleware-format "0.3.0"]
                  [compojure "1.1.5"]
                  [liberator "0.9.0"]
@@ -40,10 +40,12 @@
             [lein-environ "0.4.0"]
             [com.palletops/pallet-lein "0.8.0-alpha.1"]]
 
-  :profiles {:dev {:dependencies [[midje "1.5.1"]]}}
+  :profiles {:dev {:dependencies [[ring-mock "0.1.5"]
+                                  [ring/ring-devel "1.2.0"]
+                                  [midje "1.5.1"]]}}
   
   ;; Pallet
 ;  :pallet {:source-paths ["src-pallet"] :resource-paths []}
 ;  :pallet {:dependencies [[org.virtualbox/vboxjws "4.2.6"]]}
   
-  :main slp.app)
+  :main slp.ws.app)

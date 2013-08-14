@@ -79,3 +79,7 @@ From: http://stackoverflow.com/questions/17028427/how-to-deploy-a-clojure-web-ap
    webserver
    :extends [java-server]))
 ```
+
+
+
+lein pallet add-service aws aws-ec2 "AKIAJSS2XC5M2F7T37RQ" "+fEnXVTH68qs84UspCqv2r02R9drTnLrmJRRHH6o"

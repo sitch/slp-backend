@@ -1,1 +1,0 @@
-(ns slp.ws.models.notification)

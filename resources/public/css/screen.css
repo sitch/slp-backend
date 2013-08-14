@@ -1,0 +1,1410 @@
+/* line 3, ../../scss/_typography.scss */
+body {
+  font-family: 'proxima-nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+/* line 12, ../../scss/_typography.scss */
+h1 {
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 7px;
+  line-height: 46px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 12, ../../scss/_typography.scss */
+  h1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 29px;
+  }
+}
+
+/* line 26, ../../scss/_typography.scss */
+h2 {
+  font-size: 19px;
+  font-weight: 100;
+  letter-spacing: 7px;
+  line-height: 27px;
+}
+
+/* line 33, ../../scss/_typography.scss */
+h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* line 40, ../../scss/_typography.scss */
+h5 {
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* line 14, ../../scss/_palettes.scss */
+body {
+  color: #6e7982;
+}
+@media only screen and (max-width: 768px) {
+  /* line 14, ../../scss/_palettes.scss */
+  body {
+    color: #3f3f3f;
+  }
+}
+
+/* line 24, ../../scss/_palettes.scss */
+.yellow-stroke {
+  color: #E3EC75;
+}
+
+/* line 29, ../../scss/_palettes.scss */
+.light-silver-bg {
+  background-color: #ebebeb;
+}
+
+/* line 32, ../../scss/_palettes.scss */
+.orange-bg {
+  background-color: #e33b00;
+}
+
+/* line 35, ../../scss/_palettes.scss */
+.light-grey-bg {
+  color: #fff;
+  background-color: #85929D;
+}
+
+/* line 39, ../../scss/_palettes.scss */
+.dark-grey-bg {
+  color: #fff;
+  background-color: #2f3943;
+}
+
+/* line 43, ../../scss/_palettes.scss */
+.black-bg {
+  color: #fff;
+  background-color: #2f3943;
+}
+
+/* line 47, ../../scss/_palettes.scss */
+.orange-text {
+  color: #e33b00;
+}
+
+/* line 50, ../../scss/_palettes.scss */
+.blue-bg {
+  color: #DFE0CE;
+  background-color: #347AB4;
+}
+
+/* line 54, ../../scss/_palettes.scss */
+.green-bg {
+  background-color: #2E6C72;
+}
+
+/* line 58, ../../scss/_palettes.scss */
+.grey-bg {
+  color: #fff;
+  background-color: #6e7982;
+}
+/* line 62, ../../scss/_palettes.scss */
+.grey-bg p {
+  font-weight: 100;
+  margin-bottom: 0px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+/* line 70, ../../scss/_palettes.scss */
+.grey-bg h1, .grey-bg h2, .grey-bg h3 {
+  text-transform: uppercase;
+}
+
+/* line 1, ../../scss/_layout.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* line 5, ../../scss/_layout.scss */
+.no-click {
+  cursor: default;
+}
+
+/* line 9, ../../scss/_layout.scss */
+.full-width {
+  width: 100%;
+  *zoom: 1;
+}
+
+/* line 14, ../../scss/_layout.scss */
+.home-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 26, ../../scss/_layout.scss */
+.small-block {
+  height: 60px;
+}
+
+/* line 30, ../../scss/_layout.scss */
+.medium-block {
+  height: 88px;
+}
+
+/* line 34, ../../scss/_layout.scss */
+.large-block {
+  height: 125px;
+}
+
+/* line 1, ../../scss/_loading.scss */
+img.loading {
+  display: none;
+}
+
+/* line 4, ../../scss/_loading.scss */
+div.loading {
+  width: 100%;
+  min-height: 400px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 4, ../../scss/_loading.scss */
+  div.loading {
+    min-height: 200px;
+  }
+}
+
+/* line 1, ../../scss/_navbar.scss */
+#navbar {
+  width: 100%;
+}
+
+/* line 9, ../../scss/_navbar.scss */
+a {
+  color: #e33b00;
+}
+
+/* line 13, ../../scss/_navbar.scss */
+a:hover,
+a:focus,
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  -moz-outline-style: none;
+  outline: none;
+  color: #E33B00;
+}
+
+/* line 23, ../../scss/_navbar.scss */
+.navbar {
+  margin: 0;
+}
+
+/* line 27, ../../scss/_navbar.scss */
+.navbar .nav > .active a:hover {
+  background-color: inherit;
+  box-shadow: none;
+  color: inherit;
+}
+
+/* line 32, ../../scss/_navbar.scss */
+.navbar .brand,
+.navbar-fixed-top .brand {
+  margin: 0;
+  padding: 13px 0 17px 0;
+  line-height: 40px;
+}
+
+/* line 39, ../../scss/_navbar.scss */
+.navbar .nav {
+  margin-right: 0;
+}
+
+/* line 42, ../../scss/_navbar.scss */
+.navbar .nav li {
+  line-height: 40px;
+  width: 20%;
+}
+
+/* line 46, ../../scss/_navbar.scss */
+.navbar .nav > li > a,
+.client-list-nav a {
+  font-weight: 400;
+  font-size: 11px;
+  color: #6E7982;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 17px 0 13px 0;
+  text-shadow: none;
+}
+
+/* line 57, ../../scss/_navbar.scss */
+.navbar .brand,
+.navbar .nav > .active,
+.navbar .nav > .active > a {
+  color: #e33b00;
+  background-color: inherit;
+  box-shadow: none;
+}
+
+/* line 65, ../../scss/_navbar.scss */
+.navbar-inner {
+  background-image: none;
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #fff;
+  line-height: 40px;
+  padding: 0;
+  filter: none !important;
+}
+
+/* line 76, ../../scss/_navbar.scss */
+.navbar-inner .container-fluid {
+  padding: 0;
+}
+
+/* line 79, ../../scss/_navbar.scss */
+.navbar-shadow {
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+
+/* navbar fixed */
+/* line 89, ../../scss/_navbar.scss */
+.navbar-fixed-top {
+  position: fixed !important;
+}
+
+/* line 92, ../../scss/_navbar.scss */
+.navbar-inner.navbar-fixed-top {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  /* line 97, ../../scss/_navbar.scss */
+  .navbar .btn-navbar {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  /* line 103, ../../scss/_navbar.scss */
+  body {
+    padding: 0;
+  }
+
+  /* line 106, ../../scss/_navbar.scss */
+  .navbar-wrapper {
+    min-height: 52px;
+  }
+
+  /* line 109, ../../scss/_navbar.scss */
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin: 0;
+  }
+
+  /* line 114, ../../scss/_navbar.scss */
+  .navbar .btn-navbar {
+    margin-right: 30px;
+  }
+
+  /* line 117, ../../scss/_navbar.scss */
+  .navbar .brand,
+  .collapse .nav {
+    margin-left: 30px;
+  }
+
+  /* line 121, ../../scss/_navbar.scss */
+  .navbar-inner {
+    line-height: inherit;
+    height: auto;
+    padding: 0 !important;
+  }
+
+  /* line 126, ../../scss/_navbar.scss */
+  .navbar .brand {
+    line-height: 20px;
+  }
+
+  /* line 129, ../../scss/_navbar.scss */
+  .navbar .nav li {
+    line-height: 20px;
+  }
+
+  /* line 132, ../../scss/_navbar.scss */
+  .navbar .nav > li > a {
+    padding: 10px 15px;
+  }
+
+  /* line 135, ../../scss/_navbar.scss */
+  .navbar .btn-navbar,
+  .navbar-fixed-top .btn-navbar {
+    padding: 2px;
+    background: transparent url("../img/nav-collapse.png") no-repeat center;
+    border: 0 none;
+    box-shadow: none;
+    color: inherit;
+    text-shadow: none;
+    width: 25px;
+    height: 20px;
+  }
+
+  /* line 146, ../../scss/_navbar.scss */
+  .navbar .btn-navbar {
+    margin-top: 14px;
+  }
+
+  /* line 149, ../../scss/_navbar.scss */
+  .navbar .container {
+    padding: 0;
+  }
+}
+@media (max-width: 979px) {
+  /* line 155, ../../scss/_navbar.scss */
+  body {
+    padding-top: 0;
+  }
+}
+@media (min-width: 767px) and (max-width: 979px) {
+  /* line 161, ../../scss/_navbar.scss */
+  .collapse .nav {
+    margin-left: 100px;
+  }
+
+  /* line 164, ../../scss/_navbar.scss */
+  .navbar-fixed-top .container {
+    width: 724px;
+  }
+}
+/* line 1, ../../scss/_footer.scss */
+#Contact {
+  position: relative;
+}
+
+/* line 5, ../../scss/_footer.scss */
+footer {
+  font-size: 12px;
+  line-height: 1.45em;
+  letter-spacing: 0.125em;
+  padding: 60px 0;
+}
+/* line 11, ../../scss/_footer.scss */
+footer a {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: inherit;
+}
+/* line 16, ../../scss/_footer.scss */
+footer a:hover, footer a:focus {
+  text-decoration: none;
+  color: #2F3943;
+}
+/* line 22, ../../scss/_footer.scss */
+footer .grey-bg p {
+  margin-bottom: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 18px;
+}
+/* line 30, ../../scss/_footer.scss */
+footer ul {
+  list-style: none outside none;
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+/* line 39, ../../scss/_footer.scss */
+footer .item {
+  margin-bottom: 10px;
+}
+/* line 42, ../../scss/_footer.scss */
+footer .item a {
+  text-transform: none;
+}
+/* line 45, ../../scss/_footer.scss */
+footer .moment {
+  margin-top: 4px;
+}
+/* line 48, ../../scss/_footer.scss */
+footer .moment a {
+  display: block;
+  text-transform: uppercase;
+}
+/* line 52, ../../scss/_footer.scss */
+footer .moment a:hover {
+  color: #fff;
+}
+/* line 58, ../../scss/_footer.scss */
+footer .black-letter {
+  color: #2f3943;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 400;
+}
+/* line 64, ../../scss/_footer.scss */
+footer p.social-icons {
+  margin-top: 30px;
+  font-size: 18px;
+  letter-spacing: 0.25em;
+}
+/* line 69, ../../scss/_footer.scss */
+footer .icon-twitter {
+  font-size: 90%;
+}
+/* line 73, ../../scss/_footer.scss */
+footer .fixed-width {
+  min-width: 200px;
+}
+/* line 76, ../../scss/_footer.scss */
+footer .nowrap {
+  white-space: nowrap;
+}
+/* line 79, ../../scss/_footer.scss */
+footer .btn {
+  font-weight: 100;
+  font-family: proxima-nova;
+}
+
+@media (max-width: 767px) {
+  /* line 89, ../../scss/_footer.scss */
+  footer.container {
+    padding: 30px 0;
+    margin: 0 30px;
+  }
+
+  /* line 93, ../../scss/_footer.scss */
+  .newsletter .signup {
+    letter-spacing: 0;
+    width: 60%;
+  }
+}
+/* line 100, ../../scss/_footer.scss */
+.newsletter {
+  margin-bottom: 20px;
+}
+/* line 103, ../../scss/_footer.scss */
+.newsletter .title {
+  margin-bottom: 5px;
+}
+/* line 106, ../../scss/_footer.scss */
+.newsletter .signup {
+  font-size: 12px;
+  padding: 10px 10px 9px 13px;
+  border-radius: 0;
+  letter-spacing: 2px;
+  width: 95%;
+}
+
+/* line 115, ../../scss/_footer.scss */
+.newsletter-confirm {
+  padding: 20px 0;
+  margin-left: 0 !important;
+}
+
+/* line 121, ../../scss/_footer.scss */
+p.small-note {
+  text-indent: 0px;
+  margin-bottom: 0px;
+  line-height: 15px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #a8b4bf !important;
+  font-weight: 300;
+}
+
+/* line 130, ../../scss/_footer.scss */
+.small-note a {
+  text-transform: none;
+}
+
+/* line 1, ../../scss/_login.scss */
+.pad-form {
+  padding: 60px;
+}
+
+/********************
+ * HTML CSS
+ */
+/* line 7, ../../scss/_nvd3.scss */
+.chartWrap {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/********************
+ * TOOLTIP CSS
+ */
+/* line 18, ../../scss/_nvd3.scss */
+.nvtooltip {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  z-index: 10000;
+  font-family: Arial;
+  font-size: 13px;
+  transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -webkit-transition: opacity 500ms linear;
+  transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+  -moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 53, ../../scss/_nvd3.scss */
+.nvtooltip h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 59, ../../scss/_nvd3.scss */
+.nvtooltip p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 65, ../../scss/_nvd3.scss */
+.nvtooltip span {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+/* line 70, ../../scss/_nvd3.scss */
+.nvtooltip-pending-removal {
+  position: absolute;
+  pointer-events: none;
+}
+
+/********************
+ * SVG CSS
+ */
+/* line 81, ../../scss/_nvd3.scss */
+svg {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Trying to get SVG to act like a greedy block in all browsers */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 95, ../../scss/_nvd3.scss */
+svg text {
+  font: normal 12px sans-serif;
+}
+
+/* line 99, ../../scss/_nvd3.scss */
+svg .title {
+  font: bold 14px Arial;
+}
+
+/* line 103, ../../scss/_nvd3.scss */
+.nvd3 .nv-background {
+  fill: white;
+  fill-opacity: 0;
+  /*
+  pointer-events: none;
+  */
+}
+
+/* line 111, ../../scss/_nvd3.scss */
+.nvd3.nv-noData {
+  font-size: 18px;
+  font-weight: bolf;
+}
+
+/**********
+*  Brush
+*/
+/* line 121, ../../scss/_nvd3.scss */
+.nv-brush .extent {
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+/**********
+*  Legend
+*/
+/* line 135, ../../scss/_nvd3.scss */
+.nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
+/**********
+*  Axes
+*/
+/* line 145, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis path {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .75;
+  shape-rendering: crispEdges;
+}
+
+/* line 152, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis path.domain {
+  stroke-opacity: .75;
+}
+
+/* line 156, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis.nv-x path.domain {
+  stroke-opacity: 0;
+}
+
+/* line 160, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis line {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .25;
+  shape-rendering: crispEdges;
+}
+
+/* line 167, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis line.zero {
+  stroke-opacity: .75;
+}
+
+/* line 171, ../../scss/_nvd3.scss */
+.nvd3 .nv-axis .nv-axisMaxMin text {
+  font-weight: bold;
+}
+
+/* line 175, ../../scss/_nvd3.scss */
+.nvd3 .x .nv-axis .nv-axisMaxMin text,
+.nvd3 .x2 .nv-axis .nv-axisMaxMin text,
+.nvd3 .x3 .nv-axis .nv-axisMaxMin text {
+  text-anchor: middle;
+}
+
+/**********
+*  Brush
+*/
+/* line 187, ../../scss/_nvd3.scss */
+.nv-brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}
+
+/**********
+*  Bars
+*/
+/* line 198, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars .negative rect {
+  zfill: brown;
+}
+
+/* line 202, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars rect {
+  zfill: steelblue;
+  fill-opacity: .75;
+  transition: fill-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+/* line 211, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars rect:hover {
+  fill-opacity: 1;
+}
+
+/* line 215, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars .hover rect {
+  fill: lightblue;
+}
+
+/* line 219, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars text {
+  fill: rgba(0, 0, 0, 0);
+}
+
+/* line 223, ../../scss/_nvd3.scss */
+.nvd3 .nv-bars .hover text {
+  fill: black;
+}
+
+/* line 227, ../../scss/_nvd3.scss */
+.nvd3 .nv-x.nv-axis text {
+  transform: rotate(90);
+}
+
+/**********
+*  Bars
+*/
+/* line 236, ../../scss/_nvd3.scss */
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-discretebar .nv-groups rect {
+  stroke-opacity: 0;
+  transition: fill-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+/* line 246, ../../scss/_nvd3.scss */
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover {
+  fill-opacity: 1;
+}
+
+/* line 252, ../../scss/_nvd3.scss */
+.nvd3 .nv-discretebar .nv-groups text,
+.nvd3 .nv-multibarHorizontal .nv-groups text {
+  font-weight: bold;
+  fill: black;
+  stroke: rgba(0, 0, 0, 0);
+}
+
+/***********
+*  Pie Chart
+*/
+/* line 263, ../../scss/_nvd3.scss */
+.nvd3.nv-pie path {
+  stroke-opacity: 0;
+  transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+}
+
+/* line 272, ../../scss/_nvd3.scss */
+.nvd3.nv-pie .nv-slice text {
+  stroke: #000;
+  stroke-width: 0;
+}
+
+/* line 277, ../../scss/_nvd3.scss */
+.nvd3.nv-pie path {
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-opacity: 1;
+}
+
+/* line 283, ../../scss/_nvd3.scss */
+.nvd3.nv-pie .hover path {
+  fill-opacity: .7;
+  /*
+    stroke-width: 6px;
+    stroke-opacity: 1;
+  */
+}
+
+/* line 291, ../../scss/_nvd3.scss */
+.nvd3.nv-pie .nv-label rect {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+/**********
+* Lines
+*/
+/* line 300, ../../scss/_nvd3.scss */
+.nvd3 .nv-groups path.nv-line {
+  fill: none;
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+  shape-rendering: geometricPrecision;
+  /*
+  transition: stroke-width 250ms linear;
+  -moz-transition: stroke-width 250ms linear;
+  -webkit-transition: stroke-width 250ms linear;
+
+  transition-delay: 250ms
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+  */
+}
+
+/* line 317, ../../scss/_nvd3.scss */
+.nvd3 .nv-groups path.nv-area {
+  stroke: none;
+  stroke-linecap: round;
+  shape-rendering: geometricPrecision;
+  /*
+  stroke-width: 2.5px;
+  transition: stroke-width 250ms linear;
+  -moz-transition: stroke-width 250ms linear;
+  -webkit-transition: stroke-width 250ms linear;
+
+  transition-delay: 250ms
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+  */
+}
+
+/* line 334, ../../scss/_nvd3.scss */
+.nvd3 .nv-line.hover path {
+  stroke-width: 6px;
+}
+
+/*
+.nvd3.scatter .groups .point {
+  fill-opacity: 0.1;
+  stroke-opacity: 0.1;
+}
+  */
+/* line 345, ../../scss/_nvd3.scss */
+.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+/* line 350, ../../scss/_nvd3.scss */
+.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point {
+  fill-opacity: 0.5 !important;
+  stroke-opacity: 0.5 !important;
+}
+
+/* line 356, ../../scss/_nvd3.scss */
+.nvd3 .nv-groups .nv-point {
+  transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+}
+
+/* line 362, ../../scss/_nvd3.scss */
+.nvd3.nv-scatter .nv-groups .nv-point.hover,
+.nvd3 .nv-groups .nv-point.hover {
+  stroke-width: 20px;
+  fill-opacity: 0.5 !important;
+  stroke-opacity: 0.5 !important;
+}
+
+/* line 370, ../../scss/_nvd3.scss */
+.nvd3 .nv-point-paths path {
+  stroke: #aaa;
+  stroke-opacity: 0;
+  fill: #eee;
+  fill-opacity: 0;
+}
+
+/* line 379, ../../scss/_nvd3.scss */
+.nvd3 .nv-indexLine {
+  cursor: ew-resize;
+}
+
+/**********
+* Distribution
+*/
+/* line 388, ../../scss/_nvd3.scss */
+.nvd3 .nv-distribution {
+  pointer-events: none;
+}
+
+/**********
+*  Scatter
+*/
+/* line 398, ../../scss/_nvd3.scss */
+.nvd3 .nv-groups .nv-point {
+  pointer-events: none;
+}
+
+/* line 402, ../../scss/_nvd3.scss */
+.nvd3 .nv-groups .nv-point.hover {
+  stroke-width: 20px;
+  stroke-opacity: .5;
+}
+
+/* line 407, ../../scss/_nvd3.scss */
+.nvd3 .nv-scatter .nv-point.hover {
+  fill-opacity: 1;
+}
+
+/*
+.nv-group.hover .nv-point {
+  fill-opacity: 1;
+}
+*/
+/**********
+*  Stacked Area
+*/
+/* line 422, ../../scss/_nvd3.scss */
+.nvd3.nv-stackedarea path.nv-area {
+  fill-opacity: .7;
+  /*
+  stroke-opacity: .65;
+  fill-opacity: 1;
+  */
+  stroke-opacity: 0;
+  transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+  /*
+  transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+  */
+}
+
+/* line 442, ../../scss/_nvd3.scss */
+.nvd3.nv-stackedarea path.nv-area.hover {
+  fill-opacity: .9;
+  /*
+  stroke-opacity: .85;
+  */
+}
+
+/*
+.d3stackedarea .groups path {
+  stroke-opacity: 0;
+}
+  */
+/* line 456, ../../scss/_nvd3.scss */
+.nvd3.nv-stackedarea .nv-groups .nv-point {
+  stroke-opacity: 0;
+  fill-opacity: 0;
+}
+
+/* line 461, ../../scss/_nvd3.scss */
+.nvd3.nv-stackedarea .nv-groups .nv-point.hover {
+  stroke-width: 20px;
+  stroke-opacity: .75;
+  fill-opacity: 1;
+}
+
+/**********
+*  Line Plus Bar
+*/
+/* line 473, ../../scss/_nvd3.scss */
+.nvd3.nv-linePlusBar .nv-bar rect {
+  fill-opacity: .75;
+}
+
+/* line 477, ../../scss/_nvd3.scss */
+.nvd3.nv-linePlusBar .nv-bar rect:hover {
+  fill-opacity: 1;
+}
+
+/**********
+*  Bullet
+*/
+/* line 486, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet {
+  font: 10px sans-serif;
+}
+
+/* line 487, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet rect {
+  fill-opacity: .6;
+}
+
+/* line 488, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet rect:hover {
+  fill-opacity: 1;
+}
+
+/* line 489, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-marker {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+/* line 490, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-markerTriangle {
+  stroke: #000;
+  fill: #fff;
+  stroke-width: 1.5px;
+}
+
+/* line 491, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-tick line {
+  stroke: #666;
+  stroke-width: .5px;
+}
+
+/* line 492, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-range.nv-s0 {
+  fill: #eee;
+}
+
+/* line 493, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-range.nv-s1 {
+  fill: #ddd;
+}
+
+/* line 494, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-range.nv-s2 {
+  fill: #ccc;
+}
+
+/* line 495, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 496, ../../scss/_nvd3.scss */
+.nvd3.nv-bullet .nv-subtitle {
+  fill: #999;
+}
+
+/**********
+* Sparkline
+*/
+/* line 505, ../../scss/_nvd3.scss */
+.nvd3.nv-sparkline path {
+  fill: none;
+}
+
+/* line 509, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus g.nv-hoverValue {
+  pointer-events: none;
+}
+
+/* line 513, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-hoverValue line {
+  stroke: #f44;
+  stroke-width: 1.5px;
+}
+
+/* line 518, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus,
+.nvd3.nv-sparklineplus g {
+  pointer-events: all;
+}
+
+/* line 523, ../../scss/_nvd3.scss */
+.nvd3 .nv-hoverArea {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+/* line 528, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-xValue,
+.nvd3.nv-sparklineplus .nv-yValue {
+  /*
+  stroke: #666;
+  */
+  stroke-width: 0;
+  font-size: .8em;
+  font-weight: normal;
+}
+
+/* line 538, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-yValue {
+  stroke: #f66;
+}
+
+/* line 542, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-maxValue {
+  stroke: #2ca02c;
+  fill: #2ca02c;
+}
+
+/* line 547, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-minValue {
+  stroke: #d62728;
+  fill: #d62728;
+}
+
+/* line 552, ../../scss/_nvd3.scss */
+.nvd3.nv-sparklineplus .nv-currentValue {
+  stroke: #444;
+  fill: #444;
+}
+
+/**********
+* historical stock
+*/
+/* line 561, ../../scss/_nvd3.scss */
+.nvd3.nv-ohlcBar .nv-ticks .nv-tick {
+  stroke-width: 2px;
+}
+
+/* line 565, ../../scss/_nvd3.scss */
+.nvd3.nv-ohlcBar .nv-ticks .nv-tick.hover {
+  stroke-width: 4px;
+}
+
+/* line 569, ../../scss/_nvd3.scss */
+.nvd3.nv-ohlcBar .nv-ticks .nv-tick.positive {
+  stroke: #2ca02c;
+}
+
+/* line 573, ../../scss/_nvd3.scss */
+.nvd3.nv-ohlcBar .nv-ticks .nv-tick.negative {
+  stroke: #d62728;
+}
+
+/* line 577, ../../scss/_nvd3.scss */
+.nvd3.nv-historicalStockChart .nv-axis .nv-axislabel {
+  font-weight: bold;
+}
+
+/* line 581, ../../scss/_nvd3.scss */
+.nvd3.nv-historicalStockChart .nv-dragTarget {
+  fill-opacity: 0;
+  stroke: none;
+  cursor: move;
+}
+
+/* line 587, ../../scss/_nvd3.scss */
+.nvd3 .nv-brush .extent {
+  /*
+  cursor: ew-resize !important;
+  */
+  fill-opacity: 0 !important;
+}
+
+/* line 594, ../../scss/_nvd3.scss */
+.nvd3 .nv-brushBackground rect {
+  stroke: #000;
+  stroke-width: .4;
+  fill: #fff;
+  fill-opacity: .7;
+}
+
+/**********
+* Indented Tree
+*/
+/**
+ * TODO: the following 3 selectors are based on classes used in the example.  I should either make them standard and leave them here, or move to a CSS file not included in the library
+ */
+/* line 611, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree .name {
+  margin-left: 5px;
+}
+
+/* line 615, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree .clickable {
+  color: #08C;
+  cursor: pointer;
+}
+
+/* line 620, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree span.clickable:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+/* line 626, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree .nv-childrenCount {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* line 631, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree .nv-treeicon {
+  cursor: pointer;
+  /*
+  cursor: n-resize;
+  */
+}
+
+/* line 638, ../../scss/_nvd3.scss */
+.nvd3.nv-indentedtree .nv-treeicon.nv-folded {
+  cursor: pointer;
+  /*
+  cursor: s-resize;
+  */
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+/* line 18, ../../scss/screen.scss */
+.marketing .span4 {
+  text-align: center;
+}
+
+/* line 21, ../../scss/screen.scss */
+.marketing h2 {
+  font-weight: normal;
+}
+
+/* line 24, ../../scss/screen.scss */
+.marketing .span4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Featurettes
+------------------------- */
+/* line 33, ../../scss/screen.scss */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* line 36, ../../scss/screen.scss */
+.featurette {
+  padding-top: 120px;
+  /* Vertically center images part 1: add padding above and below text. */
+  overflow: visible;
+}
+
+/* line 51, ../../scss/screen.scss */
+.featurette-image {
+  margin-top: -120px;
+  /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+/* line 56, ../../scss/screen.scss */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+
+/* line 59, ../../scss/screen.scss */
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+/* line 64, ../../scss/screen.scss */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 979px) {
+  /* line 78, ../../scss/screen.scss */
+  .container.navbar-wrapper {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  /* line 82, ../../scss/screen.scss */
+  .navbar-inner {
+    border-radius: 0;
+    margin: -20px 0;
+  }
+
+  /* line 87, ../../scss/screen.scss */
+  .carousel .item {
+    height: 500px;
+  }
+
+  /* line 90, ../../scss/screen.scss */
+  .carousel img {
+    width: auto;
+    height: 500px;
+  }
+
+  /* line 95, ../../scss/screen.scss */
+  .featurette {
+    height: auto;
+    padding: 0;
+  }
+
+  /* line 99, ../../scss/screen.scss */
+  .featurette-image.pull-left,
+  .featurette-image.pull-right {
+    display: block;
+    float: none;
+    max-width: 40%;
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 111, ../../scss/screen.scss */
+  .navbar-inner {
+    margin: -20px;
+  }
+
+  /* line 115, ../../scss/screen.scss */
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  /* line 122, ../../scss/screen.scss */
+  .carousel .item {
+    height: 300px;
+  }
+
+  /* line 125, ../../scss/screen.scss */
+  .carousel img {
+    height: 300px;
+  }
+
+  /* line 128, ../../scss/screen.scss */
+  .carousel-caption {
+    width: 65%;
+    padding: 0 70px;
+    margin-top: 100px;
+  }
+
+  /* line 133, ../../scss/screen.scss */
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+
+  /* line 136, ../../scss/screen.scss */
+  .carousel-caption .lead,
+  .carousel-caption .btn {
+    font-size: 18px;
+  }
+
+  /* line 141, ../../scss/screen.scss */
+  .marketing .span4 + .span4 {
+    margin-top: 40px;
+  }
+
+  /* line 145, ../../scss/screen.scss */
+  .featurette-heading {
+    font-size: 30px;
+  }
+
+  /* line 148, ../../scss/screen.scss */
+  .featurette .lead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+/* line 154, ../../scss/screen.scss */
+.carousel-control {
+  color: #85929d;
+  background: none;
+  border: none;
+}
+
+/* line 160, ../../scss/screen.scss */
+.carousel-caption {
+  text-align: center;
+}
+
+/* line 164, ../../scss/screen.scss */
+.featurette-img-shadow {
+  -webkit-box-shadow: 1px 1px 10px #888888;
+  -moz-box-shadow: 1px 1px 10px #888888;
+  box-shadow: 1px 1px 10px #888888;
+}
+
+/* line 168, ../../scss/screen.scss */
+#landing {
+  overflow: hidden;
+}

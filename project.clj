@@ -38,11 +38,14 @@
                  [flyingmachine/cartographer "0.1.1"] ;mapping
                  
                  ;; Templating
-                 [hiccup "1.0.4"]]
+;                 [hiccup "1.0.4"]
+                 
+                 ]
 
   :plugins [[lein-environ "0.4.0"]
             [lein-ring "0.8.6"]
-            [lein-beanstalk "0.2.7"]]
+;            [lein-beanstalk "0.2.7"]
+            ]
 
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]
                                   [ring/ring-devel "1.2.0"]

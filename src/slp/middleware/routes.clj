@@ -78,6 +78,6 @@
   (ANY "/api/debug" {:keys [x] :as r}
        (str x))
   
-  (route GET "/" (ring.util.response/redirect "index.html"))
+;  (route GET "/" (ring.util.response/redirect "index.html"))
   
   (compojure.route/not-found "Sorry, there's nothing here."))

@@ -1,5 +1,5 @@
 (ns slp.middleware.auth
-  (:require [slp.controllers.users :as users]
+  (:require [slp.controllers.user :as user]
             [slp.db.query :as q]
             [slp.db.maprules :as mr]
             [flyingmachine.cartographer.core :as c]
@@ -30,7 +30,7 @@
     :workflows [(workflows/interactive-form
                  :redirect-on-auth? false
                  :login-failure-handler (fn [req] {:body {:errors {:username ["invalid username or password"]}} :status 401}))
-                users/attempt-registration]
+                user/attempt-registration]
 ;                session-store-authorize] 
     :redirect-on-auth? false
     :login-uri "/login"

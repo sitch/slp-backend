@@ -25,3 +25,11 @@ git clone https://github.com/Sitch/slp-backend.git
 cd /opt/local/datomic
 
 bin/transactor ~/slp-backend/resources/transactor.properties
+
+cd ~/slp-backend
+
+#migrate
+java -jar slp-0.0.1.jar db/reload
+
+# run
+java -jar slp-0.0.1.jar server

@@ -2,7 +2,7 @@
   (:require [slp.db.test :as tdb]
             [slp.db.query :as q]
             [slp.db.manage :as db-manage]
-            [slp.controllers.users :as users])
+            [slp.controllers.user :as users])
   (:use midje.sweet
         slp.paths
         slp.controllers.test-helpers))

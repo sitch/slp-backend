@@ -9,7 +9,7 @@
 ;            [slp.controllers.loans :as loans]
 ;            [slp.controllers.profile :as profile]
             [slp.controllers.session :as session]
-            [slp.controllers.users :as users]
+            [slp.controllers.user :as user]
             [cemerick.friend :as friend])
   (:use [compojure.core :as compojure.core :only (GET PUT POST DELETE ANY defroutes)]
         slp.config))
@@ -60,11 +60,11 @@
 ;  (authroute POST "/profile" profile/create!)
 ;  (authroute PUT  "/profile/:id" profile/update!)
 
-  ;; Users
-  (authroute POST "/api/users" users/registration-success-response)
-  (route     GET  "/api/users/:id" users/show)
-  (authroute PUT  "/api/users/:id" users/update!)
-  (authroute POST "/api/users/:id/password" users/change-password!)
+  ;; User
+  (authroute POST "/api/user" user/registration-success-response)
+  (route     GET  "/api/user/:id" user/show)
+  (authroute PUT  "/api/user/:id" user/update!)
+  (authroute POST "/api/user/:id/password" user/change-password!)
 
   ;; Analytics
 ;  (authroute POST "/analytics/:id" analytics/create!)
@@ -77,5 +77,7 @@
 
   (ANY "/api/debug" {:keys [x] :as r}
        (str x))
+  
+  (route GET "/" (ring.util.response/redirect "index.html"))
   
   (compojure.route/not-found "Sorry, there's nothing here."))

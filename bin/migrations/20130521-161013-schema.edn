@@ -19,7 +19,7 @@
  
  ;; USER
  {:db/doc "User Name"
-  :db/ident :users/username
+  :db/ident :user/username
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
@@ -27,14 +27,14 @@
   :db.install/_attribute :db.part/db}
 
  {:db/doc "User Password"
-  :db/ident :users/password
+  :db/ident :user/password
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
 
  {:db/doc "User Email"
-  :db/ident :users/email
+  :db/ident :user/email
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
@@ -43,56 +43,56 @@
  
  ;; USER - Profile
  {:db/doc "User First name"
-  :db/ident :users.profile/first-name
+  :db/ident :user.profile/first-name
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
  
  {:db/doc "User Last name"
-  :db/ident :users.profile/last-name
+  :db/ident :user.profile/last-name
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
  
   {:db/doc "User Date of birth"
-  :db/ident :users.profile/date-of-birth
+  :db/ident :user.profile/date-of-birth
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
 
  {:db/doc "User First street address"
-  :db/ident :users.profile/street1
+  :db/ident :user.profile/street1
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
  
  {:db/doc "User Second street address"
-  :db/ident :users.profile/street2
+  :db/ident :user.profile/street2
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
  
   {:db/doc "User City"
-  :db/ident :users.profile/city
+  :db/ident :user.profile/city
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
   
   {:db/doc "User State"
-  :db/ident :users.profile/state
+  :db/ident :user.profile/state
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
   :db.install/_attribute :db.part/db}
   
  {:db/doc "User Zipcode"
-  :db/ident :users.profile/zipcode
+  :db/ident :user.profile/zipcode
   :db/id #db/id [:db.part/db]
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one
@@ -100,7 +100,7 @@
   
 ; ;; USER - Yodlee info
 ; {:db/doc "User - Yodlee is old user"
-;  :db/ident :users/is-old-user
+;  :db/ident :user/is-old-user
 ;  :db/id #db/id [:db.part/db]
 ;  ; UNSURE ABOUT THIS FIELD ? Bool?
 ;  :db/valueType :db.type/boolean
@@ -108,7 +108,7 @@
 ;  :db.install/_attribute :db.part/db}
 ; 
 ;  {:db/doc "User - Yodlee is onboarded"
-;  :db/ident :users/is-onboarded
+;  :db/ident :user/is-onboarded
 ;  :db/id #db/id [:db.part/db]
 ;  ; UNSURE ABOUT THIS FIELD ? Bool?
 ;  :db/valueType :db.type/boolean

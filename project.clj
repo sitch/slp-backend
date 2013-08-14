@@ -6,7 +6,7 @@
                  ["sonatype" "https://oss.sonatype.org/content/repositories/releases"]]
 
 ;  :omit-source true
-;  :jvm-opts ["-Xmx2G"]
+ :jvm-opts ["-Xmx1G"]
   :resource-paths ["resources"]
   
   :pedantic? :abort ;abort on dependency version inconsistencies

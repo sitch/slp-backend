@@ -1,4 +1,4 @@
-(ns slp.controllers.users
+(ns slp.controllers.user
   (:require [slp.db.validations :as validations]
             [slp.db.query :as db]
             [datomic.api :as d]
@@ -20,7 +20,7 @@
 (defn attempt-registration
   [req]
   (let [{:keys [uri request-method params session]} req]
-    (when (and (= uri "/users")
+    (when (and (= uri "/user")
                (= request-method :post))
       (if-valid
        params (:create validations/user) errors

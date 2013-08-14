@@ -5,7 +5,7 @@
 
 (defn shutdown 
   []
-  (do (println "Shutting down..")
+  (do (println "Successfully applied migration..")
       (System/exit 0)))
 
 (defn -main

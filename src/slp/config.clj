@@ -4,7 +4,7 @@
 (def conf
   (merge-with
    merge
-   {:server-port 8080
+   {:server-port (Integer. (get (System/getenv) "PORT" 8080))
     :html-paths ["public"
                  "public"
                  "public"]

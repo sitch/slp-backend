@@ -8,19 +8,19 @@
                              [credentials :as creds])))
 
 
-(defn user
+(defn get-user
   [username]
   (if-let [user-ent (q/one [:user/username username])]
     (c/mapify user-ent mr/ent->userauth)))
 
 (defn credential-fn
   [username]
-  (user username))
+  (get-user username))
 
 (defn session-store-authorize [{:keys [uri request-method params session]}]
    (when (nil? (:cemerick.friend/identity session))
      (if-let [username (get-in session [:cemerick.friend/identity :current])]
-       (workflows/make-auth (select-keys (user username) [:id :username])))))
+       (workflows/make-auth (select-keys (get-user username) [:id :username])))))
 
 (defn auth
   [ring-app]
@@ -30,8 +30,8 @@
     :workflows [(workflows/interactive-form
                  :redirect-on-auth? false
                  :login-failure-handler (fn [req] {:body {:errors {:username ["invalid username or password"]}} :status 401}))
-                user/attempt-registration]
-;                session-store-authorize] 
+                user/attempt-registration
+                session-store-authorize] 
     :redirect-on-auth? false
     :login-uri "/login"
     :unauthorized-redirect-uri "/login"}))

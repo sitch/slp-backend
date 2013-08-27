@@ -1,7 +1,7 @@
 (ns slp.middleware.db-session-store
   (:require [slp.db.query :as q]
-            [datomic.api :as d])
-  (:use ring.middleware.session.store))
+            [datomic.api :as d]
+            [ring.middleware.session.store :as ring-session]))
 
 (defn key->eid [key-attr key]
   (ffirst (q/q [:find '?c :where ['?c key-attr key]])))
@@ -12,7 +12,7 @@
          (catch java.lang.IllegalArgumentException e nil))))
 
 (deftype DbSessionStore [key-attr data-attr partition auto-key-change?]
-  SessionStore
+  ring-session/SessionStore
   (read-session [_ key]
     (if key
       (if-let [data (data-attr (q/one [key-attr (str->uuid key)]))]

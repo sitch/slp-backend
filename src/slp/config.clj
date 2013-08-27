@@ -16,6 +16,24 @@
    {:slp-email {:username     (env :slp-email-username)
                 :password     (env :slp-email-password)}}))
 
+
+;(def conf
+;  (let [environment (or (env :app-env) "development")]
+;    (merge
+;     {:html-paths ["public"
+;                   "public"
+;                   "public"]
+;      :datomic {:db-uri "datomic:free://localhost:4334/thrive"
+;                :test-uri "datomic:mem://thrive"}
+;      :send-email false
+;      :email {:host "gmail.com"
+;              :from-address "notifications@thrivefinance.com"
+;              :from-name "Thrive Finance"
+;              :username (env :email-username)
+;              :password (env :email-password)}}
+;     (read-resource (str "config/environments/" environment ".edn")))))
+
+
 (defn config
   [& keys]
   (get-in conf keys))

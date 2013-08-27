@@ -1,12 +1,9 @@
 (ns slp.controllers.shared
-  (:require [slp.db.query :as db])
-  (:use [flyingmachine.webutils.validation :only (if-valid)]
-        slp.models.permissions
-        slp.db.mapification
-        slp.utils))
-
-(def owner-inclusion-options
-  {:owner {:only [:id :username :gravatar]}})
+  (:require [slp.db.query :as db]
+            [slp.db.mapification :as mapi]
+            [slp.models.permissions :as perms]
+            [slp.utils :as utils])
+  (:use [flyingmachine.webutils.validation :only (if-valid)]))
 
 (defn invalid
   [errors]
@@ -54,7 +51,7 @@
   `(fn [_#]
      (let [record# ~record
            auth# ~auth]
-       (if (owner? record# auth#)
+       (if (perms/owner? record# auth#)
          {:record record#}))))
 
 (defmacro can-update-record?
@@ -63,14 +60,14 @@
      (let [auth# ~auth
            record# ~record]
        (if (and (not (:deleted record#))
-                (owner? record# auth#))
+                (perms/owner? record# auth#))
          {:record record#}))))
 
 (defn create-record
   [creation-fn params mapifier]
   (fn [_]
     (let [result (creation-fn params)]
-      {:record (mapify-tx-result result mapifier)})))
+      {:record (mapi/mapify-tx-result result mapifier)})))
 
 (defn create-content
   [creation-fn params auth mapifier]

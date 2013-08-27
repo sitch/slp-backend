@@ -6,7 +6,7 @@
             [slp.db.transactions :as ts]
             [flyingmachine.cartographer.core :as c]
             [cemerick.friend :as friend]
-            cemerick.friend.workflows)
+            [cemerick.friend.workflows :as workflows])
   (:use [flyingmachine.webutils.validation :only (if-valid)]
         [liberator.core :only [defresource]]
         slp.models.permissions
@@ -20,11 +20,11 @@
 (defn attempt-registration
   [req]
   (let [{:keys [uri request-method params session]} req]
-    (when (and (= uri "/user")
+    (when (and (= uri "/api/user")
                (= request-method :post))
       (if-valid
        params (:create validations/user) errors
-       (cemerick.friend.workflows/make-auth
+       (workflows/make-auth
         (mapify-tx-result (ts/create-user params) record)
         {:cemerick.friend/redirect-on-auth? false})
        (invalid errors)))))

@@ -1,8 +1,8 @@
 (ns slp.db.maprules
   (:require [slp.db.query :as db]
+            [slp.utils :as utils]
             cemerick.friend.credentials)
-  (:use [flyingmachine.cartographer.core]
-        [slp.utils]))
+  (:use [flyingmachine.cartographer.core]))
 
 (defn ref-count
   [ref-attr]
@@ -14,11 +14,7 @@
   [date]
   (.format date-format date))
 
-(defn sorted-content
-  [content-attribute sort-fn]
-  #(sort-by sort-fn (slp.db.query/all content-attribute [:content/author (:db/id %)])))
-
-(def dbid #(or (str->int (:id %)) #db/id[:db.part/user]))
+(def dbid #(or (utils/str->int (:id %)) #db/id[:db.part/user]))
 
 (defmaprules ent->user
   (attr :id :db/id)
@@ -38,6 +34,6 @@
   (attr :user/password #(cemerick.friend.credentials/hash-bcrypt (:password %))))
 
 (defmaprules change-password->txdata
-  (attr :db/id #(str->int (:id %)))
+  (attr :db/id #(utils/str->int (:id %)))
   (attr :user/password #(cemerick.friend.credentials/hash-bcrypt (:new-password %))))
 

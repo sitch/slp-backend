@@ -7,7 +7,6 @@
             (cemerick.friend [workflows :as workflows]
                              [credentials :as creds])))
 
-
 (defn get-user
   [username]
   (if-let [user-ent (q/one [:user/username username])]

@@ -24,7 +24,6 @@
       [true {:errors errors#
              :representation {:media-type "application/json"}}])))
 
-
 ;; working with liberator
 (defn exists?
   [record]
@@ -41,34 +40,36 @@
   [ctx]
   {:errors (get ctx :errors)})
 
-(defn delete-record-in-ctx
-  [ctx]
-  (db/t [{:db/id (get-in ctx [:record :id])
-          :content/deleted true}]))
+;(defn delete-record-in-ctx
+;  [ctx]
+;  (db/t [{:db/id (get-in ctx [:record :id])
+;          :content/deleted true}]))
 
-(defmacro can-delete-record?
-  [record auth]
-  `(fn [_#]
-     (let [record# ~record
-           auth# ~auth]
-       (if (perms/owner? record# auth#)
-         {:record record#}))))
+;(defmacro can-delete-record?
+;  [record auth]
+;  `(fn [_#]
+;     (let [record# ~record
+;           auth# ~auth]
+;       (if (or (author? record# auth#) (moderator? auth#))
+;         {:record record#}))))
+;
+;(defmacro can-update-record?
+;  [record auth]
+;  `(fn [_#]
+;     (let [auth# ~auth
+;           record# ~record]
+;       (if (and (not (:deleted record#))
+;                (or (moderator? auth#)
+;                    (author? record# auth#)))
+;         {:record record#}))))
+;
+;(defn create-record
+;  [creation-fn params mapifier]
+;  (fn [_]
+;    (let [result (creation-fn params)]
+;      {:record (mapi/mapify-tx-result result mapifier)})))
 
-(defmacro can-update-record?
-  [record auth]
-  `(fn [_#]
-     (let [auth# ~auth
-           record# ~record]
-       (if (and (not (:deleted record#))
-                (perms/owner? record# auth#))
-         {:record record#}))))
+;(defn create-content
+;  [creation-fn params auth mapifier]
+;  (create-record creation-fn (merge params {:author-id (:id auth)}) mapifier))
 
-(defn create-record
-  [creation-fn params mapifier]
-  (fn [_]
-    (let [result (creation-fn params)]
-      {:record (mapi/mapify-tx-result result mapifier)})))
-
-(defn create-content
-  [creation-fn params auth mapifier]
-  (create-record creation-fn (merge params {:owner-id (:id auth)}) mapifier))

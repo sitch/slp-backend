@@ -23,10 +23,10 @@
            :body "Exception caught"})))))
 
 ; https://github.com/talios/wellrested
-(defn wrap-hateoas [f]
-  "Provide all necessary HATEOAS compliant links"
-  (fn [request]
-    (f request)))
+;(defn wrap-hateoas [f]
+;  "Provide all necessary HATEOAS compliant links"
+;  (fn [request]
+;    (f request)))
 
 (defn debug [f]
   (fn [{:keys [uri request-method params session] :as request}]
@@ -39,7 +39,8 @@
 (defn wrap
   [to-wrap]
   (-> to-wrap
-      (wrap-session {:cookie-name "slp-session" :store (db-session-store {})})
+      (wrap-session {:cookie-name (config :cookie-name) 
+                     :store (db-session-store {})})
       (wrap-restful-format :formats [:json-kw])
       wrap-exception
 ;      wrap-hateoas

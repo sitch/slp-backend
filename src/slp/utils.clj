@@ -1,4 +1,5 @@
-(ns slp.utils)
+(ns slp.utils 
+  (:require [clojure.java.io :as io]))
 
 (defn now [] (java.util.Date.))
 
@@ -11,3 +12,15 @@
 (defn remove-nils-from-map
   [record]
   (into {} (remove (comp nil? second) record)))
+
+(defn slurp-resource
+  [path]
+  (-> path
+      io/resource
+      slurp))
+
+(defn read-resource
+  [path]
+  (-> path
+      slurp-resource
+      read-string))

@@ -1,6 +1,6 @@
 (ns slp.db.tools.mapification
   (:require [flyingmachine.cartographer.core :as c]
-            [slp.db.query :as db]))
+            [slp.db.tools.query :as db]))
 
 (defmacro defmapifier
   [fn-name rules & mapify-opts]

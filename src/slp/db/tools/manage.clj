@@ -1,7 +1,7 @@
 (ns slp.db.tools.manage
   (:gen-class)
   (:require [datomic.api :as d]
-            [slp.db.query :as db]
+            [slp.db.tools.query :as db]
             [clojure.java.io :as io])
   (:use environ.core
         slp.config)

@@ -1,14 +1,14 @@
-(ns slp.db.manage
+(ns slp.db.tools.manage
   (:gen-class)
   (:require [datomic.api :as d]
             [slp.db.query :as db]
             [clojure.java.io :as io])
-  (:use environ.core)
+  (:use environ.core
+        slp.config)
   (:import java.io.File))
 
 (def migrations
-  [:20130521-161013-schema
-   :20130521-161014-seed-data])
+  (config :migrations))
 
 (defn create
   []
@@ -107,7 +107,7 @@
 (defn migrate
   []
   (create)
-  (apply ensure-schemas (into [(db/conn) :slp/schema (migrations-map migrations)] migrations)))
+  (apply ensure-schemas (into [(db/conn) (config :schema) (migrations-map migrations)] migrations)))
 
 (defn reload
   []

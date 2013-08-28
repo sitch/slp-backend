@@ -1,6 +1,6 @@
 (ns slp.controllers.shared
-  (:require [slp.db.query :as db]
-            [slp.db.mapification :as mapi]
+  (:require [slp.db.tools.query :as db]
+            [slp.db.tools.mapification :as mapi]
             [slp.models.permissions :as perms]
             [slp.utils :as utils])
   (:use [flyingmachine.webutils.validation :only (if-valid)]))
@@ -10,9 +10,9 @@
   {:body {:errors errors}
    :status 412})
 
-(defmacro id
-  []
-  '(str->int (:id params)))
+(defn get-id
+  [params]
+  (utils/str->int (:id params)))
 
 (defmacro validator
   "Used in malformed? which is why truth values are reversed"

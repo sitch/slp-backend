@@ -1,4 +1,4 @@
-(ns slp.db.mapification
+(ns slp.db.tools.mapification
   (:require [flyingmachine.cartographer.core :as c]
             [slp.db.query :as db]))
 

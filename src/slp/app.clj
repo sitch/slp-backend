@@ -1,7 +1,7 @@
 (ns slp.app
   (:gen-class)
   (:require [slp.server :as server]
-            [slp.db.manage :as db]))
+            [slp.db.tools.manage :as db]))
 
 (defn shutdown 
   []

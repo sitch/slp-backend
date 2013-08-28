@@ -1,5 +1,5 @@
 (ns slp.middleware.db-session-store
-  (:require [slp.db.query :as q]
+  (:require [slp.db.tools.query :as q]
             [datomic.api :as d]
             [ring.middleware.session.store :as ring-session]))
 

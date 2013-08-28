@@ -1,6 +1,6 @@
 (ns slp.middleware.auth
   (:require [slp.controllers.user :as user]
-            [slp.db.query :as q]
+            [slp.db.tools.query :as q]
             [slp.db.maprules :as mr]
             [flyingmachine.cartographer.core :as c]
             [cemerick.friend :as friend]

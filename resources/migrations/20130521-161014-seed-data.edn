@@ -2,5 +2,7 @@
  {:user/username "admin"
   :user/password "$2a$10$iLBiogT.GcTHz1nDpZ.tR.X/hClBNICizX2wqyPLwt3KCxmSFs6eW" ;; "password"
   :user/email "admin@studentlendingproject.com"
+  :user.profile/firstname "michael"
+  :user.profile/lastname "sitchenko"
   :db/id #db/id [:db.part/user -1]}
 ]

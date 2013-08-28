@@ -1,5 +1,5 @@
 (ns slp.db.maprules
-  (:require [slp.db.query :as db]
+  (:require [slp.db.tools.query :as db]
             [slp.utils :as utils]
             cemerick.friend.credentials)
   (:use [flyingmachine.cartographer.core]))
@@ -15,6 +15,11 @@
   (.format date-format date))
 
 (def dbid #(or (utils/str->int (:id %)) #db/id[:db.part/user]))
+
+(defmaprules ent->profile
+  (attr :id :db/id)
+  (attr :firstname :user.profile/firstname)
+  (attr :lastname :user.profile/lastname))
 
 (defmaprules ent->user
   (attr :id :db/id)
@@ -37,3 +42,6 @@
   (attr :db/id #(utils/str->int (:id %)))
   (attr :user/password #(cemerick.friend.credentials/hash-bcrypt (:new-password %))))
 
+(defmaprules profile->txdata
+  (attr :user/firstname :firstname)
+  (attr :user/lastname :lastname))

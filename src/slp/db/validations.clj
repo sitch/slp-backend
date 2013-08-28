@@ -1,5 +1,5 @@
 (ns slp.db.validations
-  (:require [slp.db.query :as db])
+  (:require [slp.db.tools.query :as db])
   (:import org.mindrot.jbcrypt.BCrypt))
 
 (def user-validations

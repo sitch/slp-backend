@@ -1,4 +1,4 @@
-(ns slp.db.query
+(ns slp.db.tools.query
   (:require [datomic.api :as d])
   (:use slp.config))
 

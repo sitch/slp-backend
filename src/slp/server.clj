@@ -1,6 +1,6 @@
 (ns slp.server
   (:gen-class)
-  (:require [slp.db.manage :as db])
+  (:require [slp.db.tools.manage :as db])
   (:use clojure.stacktrace
         [ring.adapter.jetty :only (run-jetty)]
         ring.middleware.format
